@@ -14,7 +14,7 @@ body {
 .flex-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     max-width: 720px;
     margin: auto auto;
 }
@@ -30,28 +30,32 @@ details {
 
     summary {
         list-style: none;
+        // visibility: hidden;
     }
     
     summary::marker {
         display: none;
+        visibility: hidden;
     }
 
     summary > h1 {
         color: transparent;
-        background: linear-gradient(45deg, #f00f, #ffff, #00ff) #000f ;
+        background: linear-gradient(45deg, white, orange, hotpink, blue, green);
         font-family: "Zen Tokyo Zoo";
+        font-size: 24px;
         padding: 15px;
         text-align: center;
         cursor: pointer;
         background-clip: text;
         letter-spacing: .25em;
         -webkit-background-clip: text;
-        transition: letter-spacing .5s;
+        transition: letter-spacing .5s, filter 1s;
     }
 
     summary > h1:hover {
-        filter: hue-rotate(90deg);
-        letter-spacing: unset;
+        
+        filter: hue-rotate(90deg) invert(100%);
+        letter-spacing: .15em;
     }
 
     .flex-item {
@@ -62,6 +66,7 @@ details {
         text-align: center;
         height: auto;
         width: 100%;
+        overflow: hidden;
     }
 
     summary div.flex-item {
@@ -73,7 +78,7 @@ details {
         background-clip: text;
         color: transparent;
         font-family: "Tourney";
-        font-size: 32px;
+        font-size: 20px;
         padding: 15px;
         -webkit-background-clip: text;
         letter-spacing: .25em;
@@ -83,7 +88,7 @@ details {
     }
 
     .flex-item > h2:hover {
-        filter: invert(100%) contrast(400%) ;
+        filter: invert(100%) contrast(200%) ;
         letter-spacing: .15em;
         text-shadow: 3px 3px 15px hotpink;
     }
