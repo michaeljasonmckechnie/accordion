@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #1a1a1a;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 720px;
+    margin: auto auto;
+}
+
+.flex-container > details {
+    display: block;
+    width: 100%;
+}
+
+details {
+    background: #333;
+    width: 100%;
+
+    summary {
+        list-style: none;
+    }
+    
+    summary::marker {
+        display: none;
+    }
+
+    summary > h1 {
+        color: transparent;
+        background: linear-gradient(45deg, #f00f, #ffff, #00ff) #000f ;
+        font-family: "Zen Tokyo Zoo";
+        padding: 15px;
+        text-align: center;
+        cursor: pointer;
+        background-clip: text;
+        letter-spacing: .25em;
+        -webkit-background-clip: text;
+        transition: letter-spacing .5s;
+    }
+
+    summary > h1:hover {
+        filter: hue-rotate(90deg);
+        letter-spacing: unset;
+    }
+
+    .flex-item {
+        border-collapse: collapse;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        width: 100%;
+    }
+
+    summary div.flex-item {
+        background: #111;
+    }
+
+    .flex-item > h2 {
+        background: linear-gradient(45deg, white, red, orange, purple, white);
+        background-clip: text;
+        color: transparent;
+        font-family: "Tourney";
+        font-size: 32px;
+        padding: 15px;
+        -webkit-background-clip: text;
+        letter-spacing: .25em;
+        cursor: pointer;
+        width: 100%;
+        transition: letter-spacing 1s, text-shadow .5s, filter 1s;
+    }
+
+    .flex-item > h2:hover {
+        filter: invert(100%) contrast(400%) ;
+        letter-spacing: .15em;
+        text-shadow: 3px 3px 15px hotpink;
+    }
+
+    .flex-item.img {
+        border-bottom: 3px solid #666;
+        padding: 10px;
+    }
+
+    .flex-item > img {
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+        max-height: 500px;
+        box-shadow: 0 5px 5px #1a1a1a;
+    }
+
+    .flex-item > img:hover {
+        filter: invert(100%);
+    }
+
+}
