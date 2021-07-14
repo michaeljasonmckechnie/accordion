@@ -29,6 +29,10 @@ body {
   width: 100%;
 }
 
+details summary::-webkit-details-marer {
+  display: none;
+}
+
 details {
   background: #333;
   width: 100%;
