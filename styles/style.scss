@@ -70,7 +70,7 @@ details {
         text-align: center;
         height: auto;
         width: 100%;
-        overflow: hidden;
+        // overflow: hidden;
     }
 
     summary div.flex-item {
@@ -95,19 +95,41 @@ details {
         filter: invert(100%) contrast(200%) ;
         letter-spacing: .15em;
         text-shadow: 3px 3px 15px hotpink;
+        animation: .5s ease-in-out 0s 1 bounce;
+
+        @keyframes bounce {
+            0% {transform: translateY(-25px); margin-top: 25px;}
+            50% {transform: translateY(5px); margin-bottom: 5px;}            
+            100% {transform: translateY(0px); margin: 0px;}
+        }
     }
 
     .flex-item.img {
         border-bottom: 3px solid #666;
         padding: 10px;
+        align-items: flex-start;
+
     }
 
-    .flex-item > img {
+    .flex-item.img > .flex-item > h2 {
+        transition: unset;
+        letter-spacing: normal;
+    }
+
+
+
+    .flex-item.img > .flex-item > h2:hover {
+        filter: none;
+        letter-spacing: normal;
+        text-shadow: none;
+    }
+    
+    .flex-item img {
         width: 100%;
         height: auto;
         max-width: 500px;
         max-height: 500px;
-        box-shadow: 0 5px 5px #1a1a1a;
+        box-shadow: 0 3px 3px 3px #fff9;
     }
 
     .flex-item > img:hover {
@@ -115,3 +137,5 @@ details {
     }
 
 }
+
+

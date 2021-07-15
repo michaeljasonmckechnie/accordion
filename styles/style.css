@@ -84,7 +84,6 @@ details .flex-item {
   text-align: center;
   height: auto;
   width: 100%;
-  overflow: hidden;
 }
 
 details summary div.flex-item {
@@ -113,20 +112,74 @@ details .flex-item > h2:hover {
           filter: invert(100%) contrast(200%);
   letter-spacing: .15em;
   text-shadow: 3px 3px 15px hotpink;
+  -webkit-animation: .5s ease-in-out 0s 1 bounce;
+          animation: .5s ease-in-out 0s 1 bounce;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+    margin-top: 25px;
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    margin-bottom: 5px;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    margin: 0px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+    margin-top: 25px;
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    margin-bottom: 5px;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    margin: 0px;
+  }
 }
 
 details .flex-item.img {
   border-bottom: 3px solid #666;
   padding: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-details .flex-item > img {
+details .flex-item.img > .flex-item > h2 {
+  -webkit-transition: unset;
+  transition: unset;
+  letter-spacing: normal;
+}
+
+details .flex-item.img > .flex-item > h2:hover {
+  -webkit-filter: none;
+          filter: none;
+  letter-spacing: normal;
+  text-shadow: none;
+}
+
+details .flex-item img {
   width: 100%;
   height: auto;
   max-width: 500px;
   max-height: 500px;
-  -webkit-box-shadow: 0 5px 5px #1a1a1a;
-          box-shadow: 0 5px 5px #1a1a1a;
+  -webkit-box-shadow: 0 3px 3px 3px #fff9;
+          box-shadow: 0 3px 3px 3px #fff9;
 }
 
 details .flex-item > img:hover {
