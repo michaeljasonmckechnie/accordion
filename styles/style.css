@@ -164,6 +164,8 @@ details .flex-item.img > .flex-item > h2 {
   -webkit-transition: unset;
   transition: unset;
   letter-spacing: normal;
+  -webkit-animation: none;
+          animation: none;
 }
 
 details .flex-item.img > .flex-item > h2:hover {

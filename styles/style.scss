@@ -104,6 +104,8 @@ details {
         }
     }
 
+
+
     .flex-item.img {
         border-bottom: 3px solid #666;
         padding: 10px;
@@ -114,6 +116,7 @@ details {
     .flex-item.img > .flex-item > h2 {
         transition: unset;
         letter-spacing: normal;
+        animation: none;
     }
 
 
