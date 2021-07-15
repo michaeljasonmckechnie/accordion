@@ -95,12 +95,18 @@ details {
         filter: invert(100%) contrast(200%) ;
         letter-spacing: .15em;
         text-shadow: 3px 3px 15px hotpink;
-        animation: .5s ease-in-out 0s 1 bounce;
+        animation: 1s ease-in-out 0s 1 bounce;
+
+        // @keyframes bounce {
+        //     0% {transform: translateY(-25px); margin-top: 25px;border:25px solid red;}
+        //     50% {transform: translateY(5px); margin-bottom: 5px;
+        //     border: 12.5px solid red;}            
+        //     100% {transform: translateY(0px); margin: 0px; border: none;}
+        // }
 
         @keyframes bounce {
-            0% {transform: translateY(-25px); margin-top: 25px;}
-            50% {transform: translateY(5px); margin-bottom: 5px;}            
-            100% {transform: translateY(0px); margin: 0px;}
+            from { border-left: 50px groove red; border-right: 50px groove red; filter: hue-rotate(0deg);}
+            to { border-left: 0px groove red;  border-right: 0px groove red; filter: hue-rotate(360deg);}
         }
     }
 
