@@ -112,37 +112,45 @@ details .flex-item > h2:hover {
           filter: invert(100%) contrast(200%);
   letter-spacing: .15em;
   text-shadow: 3px 3px 15px hotpink;
-  -webkit-animation: 1s ease-in-out 0s 1 bounce;
-          animation: 1s ease-in-out 0s 1 bounce;
+  -webkit-animation: .5s ease-in-out 0s 1 bounce;
+          animation: .5s ease-in-out 0s 1 bounce;
 }
 
 @-webkit-keyframes bounce {
   from {
-    border-left: 50px groove red;
-    border-right: 50px groove red;
-    -webkit-filter: hue-rotate(0deg);
-            filter: hue-rotate(0deg);
+    border-left: 90px groove red;
+    border-right: 90px groove red;
+    -webkit-filter: hue-rotate(0deg) saturate(200%);
+            filter: hue-rotate(0deg) saturate(200%);
+    outline: 50px solid red;
+    outline-offset: -50px;
   }
   to {
     border-left: 0px groove red;
     border-right: 0px groove red;
-    -webkit-filter: hue-rotate(360deg);
-            filter: hue-rotate(360deg);
+    -webkit-filter: hue-rotate(360deg) saturate(200%);
+            filter: hue-rotate(360deg) saturate(200%);
+    outline: none;
+    outline-offset: 0px;
   }
 }
 
 @keyframes bounce {
   from {
-    border-left: 50px groove red;
-    border-right: 50px groove red;
-    -webkit-filter: hue-rotate(0deg);
-            filter: hue-rotate(0deg);
+    border-left: 90px groove red;
+    border-right: 90px groove red;
+    -webkit-filter: hue-rotate(0deg) saturate(200%);
+            filter: hue-rotate(0deg) saturate(200%);
+    outline: 50px solid red;
+    outline-offset: -50px;
   }
   to {
     border-left: 0px groove red;
     border-right: 0px groove red;
-    -webkit-filter: hue-rotate(360deg);
-            filter: hue-rotate(360deg);
+    -webkit-filter: hue-rotate(360deg) saturate(200%);
+            filter: hue-rotate(360deg) saturate(200%);
+    outline: none;
+    outline-offset: 0px;
   }
 }
 
